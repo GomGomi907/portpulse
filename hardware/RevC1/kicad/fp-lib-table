@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "USB_Replug_Dongle_RevC1")(type "KiCad")(uri "${KIPRJMOD}/USB_Replug_Dongle_RevC1.pretty")(options "")(descr "Rev.C.1 exact connector/test footprints"))
+)

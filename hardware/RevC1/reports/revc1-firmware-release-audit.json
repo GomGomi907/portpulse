@@ -1,0 +1,11 @@
+{
+  "release": "firmware\\releases\\USB_Replug_Dongle_RevC1_FW_0.2.1_20260718",
+  "zip": "firmware\\releases\\USB_Replug_Dongle_RevC1_FW_0.2.1_20260718_FULL.zip",
+  "zip_sha256": "37225ECC2BB1FFBF4918625DBFD60FC98C07447F9D33B51DEC0B4F111A4F7611",
+  "files": 34,
+  "zip_crc_passed": true,
+  "duplicates": false,
+  "empty_files": [],
+  "hash_mismatches": [],
+  "checks_passed": true
+}

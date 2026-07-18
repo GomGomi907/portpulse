@@ -1,0 +1,21 @@
+test_accepts_decimal_and_hex_usb_ids (test_usb_replug.UsbReplugCliTests) ... ok
+test_builds_basic_commands (test_usb_replug.UsbReplugCliTests) ... ok
+test_cycle_timeout_is_at_least_delay_plus_two_seconds (test_usb_replug.UsbReplugCliTests) ... ok
+test_default_cycle_timeout_accounts_for_firmware_delay (test_usb_replug.UsbReplugCliTests) ... ok
+test_explicit_port_takes_precedence_over_discovery (test_usb_replug.UsbReplugCliTests) ... ok
+test_main_auto_discovers_port_and_uses_cycle_timeout (test_usb_replug.UsbReplugCliTests) ... ok
+test_main_prints_response_from_transport (test_usb_replug.UsbReplugCliTests) ... ok
+test_main_returns_failure_for_device_error_response (test_usb_replug.UsbReplugCliTests) ... ok
+test_ports_command_fails_when_no_ports_match (test_usb_replug.UsbReplugCliTests) ... ok
+test_ports_command_lists_matching_ports (test_usb_replug.UsbReplugCliTests) ... ok
+test_rejects_bad_transport_settings (test_usb_replug.UsbReplugCliTests) ... ok
+test_rejects_out_of_range_cycle_delay (test_usb_replug.UsbReplugCliTests) ... ok
+test_resolve_port_fails_clearly_for_zero_or_multiple_matches (test_usb_replug.UsbReplugCliTests) ... ok
+test_resolves_single_matching_port (test_usb_replug.UsbReplugCliTests) ... ok
+test_serial_substring_filters_matches (test_usb_replug.UsbReplugCliTests) ... ok
+test_transact_writes_ascii_command_and_reads_response (test_usb_replug.UsbReplugCliTests) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.063s
+
+OK

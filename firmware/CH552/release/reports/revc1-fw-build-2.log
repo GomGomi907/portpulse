@@ -1,0 +1,28 @@
+test_replug_core: PASS
+test_descriptors: PASS
+test_usb_cdc: PASS
+test_p1_power_is_push_pull_but_data_control_is_open_drain (__main__.GpioSafetyTests) ... ok
+test_p3_fault_and_unused_pin_become_high_impedance (__main__.GpioSafetyTests) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
++ c:\mingw64\bin\gcc.EXE -std=c11 -Wall -Wextra -Werror -pedantic -Iinclude src/replug_core.c tests/test_replug_core.c -o D:\oh_my_usb\firmware\usb_replug_ch552\build\host\test_replug_core.exe
++ D:\oh_my_usb\firmware\usb_replug_ch552\build\host\test_replug_core.exe
++ c:\mingw64\bin\gcc.EXE -std=c11 -Wall -Wextra -Werror -pedantic -Iinclude src/usb_descriptors.c tests/test_descriptors.c -o D:\oh_my_usb\firmware\usb_replug_ch552\build\host\test_descriptors.exe
++ D:\oh_my_usb\firmware\usb_replug_ch552\build\host\test_descriptors.exe
++ c:\mingw64\bin\gcc.EXE -std=c11 -Wall -Wextra -Werror -pedantic -Iinclude -DUSB_CDC_HOST_TEST src/usb_cdc.c src/usb_descriptors.c tests/test_usb_cdc.c -o D:\oh_my_usb\firmware\usb_replug_ch552\build\host\test_usb_cdc.exe
++ D:\oh_my_usb\firmware\usb_replug_ch552\build\host\test_usb_cdc.exe
++ C:\Users\tkdrm\AppData\Local\Programs\Python\Python310\python.exe tests/test_gpio_safety.py
++ "C:\Program Files\SDCC\bin\sdcc.exe" -mmcs51 --model-small --std-c99 --opt-code-size --xram-loc 0x0100 --xram-size 0x0300 --code-size 0x3800 -Iinclude -c src\ch552_main.c -o D:\oh_my_usb\firmware\usb_replug_ch552\build\sdcc\ch552_main.rel
++ "C:\Program Files\SDCC\bin\sdcc.exe" -mmcs51 --model-small --std-c99 --opt-code-size --xram-loc 0x0100 --xram-size 0x0300 --code-size 0x3800 -Iinclude -c src\replug_core.c -o D:\oh_my_usb\firmware\usb_replug_ch552\build\sdcc\replug_core.rel
++ "C:\Program Files\SDCC\bin\sdcc.exe" -mmcs51 --model-small --std-c99 --opt-code-size --xram-loc 0x0100 --xram-size 0x0300 --code-size 0x3800 -Iinclude -c src\usb_cdc.c -o D:\oh_my_usb\firmware\usb_replug_ch552\build\sdcc\usb_cdc.rel
++ "C:\Program Files\SDCC\bin\sdcc.exe" -mmcs51 --model-small --std-c99 --opt-code-size --xram-loc 0x0100 --xram-size 0x0300 --code-size 0x3800 -Iinclude -c src\usb_descriptors.c -o D:\oh_my_usb\firmware\usb_replug_ch552\build\sdcc\usb_descriptors.rel
++ "C:\Program Files\SDCC\bin\sdcc.exe" -mmcs51 --model-small --std-c99 --opt-code-size --xram-loc 0x0100 --xram-size 0x0300 --code-size 0x3800 -Iinclude D:\oh_my_usb\firmware\usb_replug_ch552\build\sdcc\ch552_main.rel D:\oh_my_usb\firmware\usb_replug_ch552\build\sdcc\replug_core.rel D:\oh_my_usb\firmware\usb_replug_ch552\build\sdcc\usb_cdc.rel D:\oh_my_usb\firmware\usb_replug_ch552\build\sdcc\usb_descriptors.rel -o D:\oh_my_usb\firmware\usb_replug_ch552\build\sdcc\usb_replug_ch552.ihx
++ "C:\Program Files\SDCC\bin\packihx.exe" D:\oh_my_usb\firmware\usb_replug_ch552\build\sdcc\usb_replug_ch552.ihx
++ "C:\Program Files\SDCC\bin\makebin.exe" -p D:\oh_my_usb\firmware\usb_replug_ch552\build\sdcc\usb_replug_ch552.ihx D:\oh_my_usb\firmware\usb_replug_ch552\build\sdcc\usb_replug_ch552.bin
+Memory: code 5897/14336 bytes; application XRAM 79/768 bytes
+DMA: EP0 0x0000, EP1 0x0040, EP2 0x0080
+Image: checksums valid; highest address 0x1708 < 0x3800
+Firmware: D:\oh_my_usb\firmware\usb_replug_ch552\build\sdcc\usb_replug_ch552.bin (5897 bytes)

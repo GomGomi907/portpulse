@@ -1,0 +1,1 @@
+4-layer FR-4; top-side full assembly. Enable engineer review. J1 USB-C opens LEFT/PC; J2 USB-A opens RIGHT/DUT. Verify J1/J2 mixed SMT/PTH shell pads, U1-U7 pin-1/orientation, U6/U7 ESD direction, and Y1 before assembly.

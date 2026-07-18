@@ -1,0 +1,59 @@
+{
+  "schematic": "USB_Replug_Dongle_RevC1\\USB_Replug_Dongle_RevC1.kicad_sch",
+  "checks": {
+    "hub_reset_only_u1_and_tp8": true,
+    "ch552_p3_1_is_unconnected": true,
+    "fault_net_exact_members": true,
+    "fault_pullup_is_5v": true,
+    "fault_not_tied_to_3v3": true,
+    "oe_upper_pullup_is_5v": true,
+    "oe_series_path": true,
+    "oe_resistors_are_equal_5k1": true,
+    "oe_por_below_3v3": true,
+    "oe_release_above_vih_min": true
+  },
+  "calculated_limits_v": {
+    "oe_por_max": 2.6513,
+    "oe_release_min": 1.5623,
+    "fsusb_control_absolute_max": 3.3,
+    "fsusb_vih_min": 1.3
+  },
+  "evidence": {
+    "hub_reset_nodes": [
+      [
+        "TP8",
+        "1"
+      ],
+      [
+        "U1",
+        "17"
+      ]
+    ],
+    "target_fault_nodes": [
+      [
+        "R7",
+        "1"
+      ],
+      [
+        "TP7",
+        "1"
+      ],
+      [
+        "U2",
+        "10"
+      ],
+      [
+        "U4",
+        "4"
+      ]
+    ],
+    "r7_pin2_net": "/VBUS_IN",
+    "u2_pin9_net": null,
+    "r6_r8_r9_values": {
+      "R6": "5.1k 1%",
+      "R8": "5.1k 1%",
+      "R9": "5.1k 1%"
+    }
+  },
+  "checks_passed": true
+}

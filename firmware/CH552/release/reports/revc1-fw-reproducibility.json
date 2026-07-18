@@ -1,0 +1,36 @@
+{
+  "generated": "2026-07-18T20:12:00.4582717+09:00",
+  "checks_passed": true,
+  "artifacts": [
+    {
+      "path": "build/sdcc/usb_replug_ch552.bin",
+      "first_sha256": "D12C7B57A299AEA26DBAAB1A542B281A8121277C4CFCC6812FFB071F388B74E8",
+      "second_sha256": "D12C7B57A299AEA26DBAAB1A542B281A8121277C4CFCC6812FFB071F388B74E8",
+      "match": true
+    },
+    {
+      "path": "build/sdcc/usb_replug_ch552.hex",
+      "first_sha256": "001B5E482F13D4126EC600F7630426DFC15C848DBD63E884E6CF3CC78EFE1D2D",
+      "second_sha256": "001B5E482F13D4126EC600F7630426DFC15C848DBD63E884E6CF3CC78EFE1D2D",
+      "match": true
+    },
+    {
+      "path": "build/sdcc/usb_replug_ch552.ihx",
+      "first_sha256": "04F42F354A58B6E5DA887A47AD4DE478D71CA731C62CDCF0360A5135085CB843",
+      "second_sha256": "04F42F354A58B6E5DA887A47AD4DE478D71CA731C62CDCF0360A5135085CB843",
+      "match": true
+    },
+    {
+      "path": "build/sdcc/usb_replug_ch552.map",
+      "first_sha256": "11F16798CCC1C8DF6D8934D7743E52C6DC8FFB64AA5F51CBAA9A8ED11A94A8EE",
+      "second_sha256": "11F16798CCC1C8DF6D8934D7743E52C6DC8FFB64AA5F51CBAA9A8ED11A94A8EE",
+      "match": true
+    },
+    {
+      "path": "build/sdcc/usb_replug_ch552.mem",
+      "first_sha256": "17CC884A5DF327093C0FF63256E26513741656FD44169616254363976542E909",
+      "second_sha256": "17CC884A5DF327093C0FF63256E26513741656FD44169616254363976542E909",
+      "match": true
+    }
+  ]
+}

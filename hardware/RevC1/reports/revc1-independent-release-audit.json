@@ -1,0 +1,51 @@
+{
+  "generated": "2026-07-18T20:13:04.2107258+09:00",
+  "release": "D:\\oh_my_usb\\production\\USB_Replug_Dongle_RevC1_JLCPCB_OrderReady_20260718",
+  "checks": {
+    "manifest_missing": [],
+    "manifest_hash_mismatches": [],
+    "bom_rows": 14,
+    "bom_refs": 29,
+    "pos_rows": 29,
+    "missing_positions": [],
+    "extra_positions": [],
+    "blank_lcsc_rows": 0,
+    "non_top_rows": 0,
+    "obsolete_ids_in_active_inputs": null,
+    "assembly_note_chars": 220,
+    "assembly_note_within_500": true,
+    "gerber_files": 16,
+    "manifest_files": 49,
+    "all_zip_audits_passed": true
+  },
+  "zip_audits": [
+    {
+      "path": "D:\\oh_my_usb\\production\\USB_Replug_Dongle_RevC1_JLCPCB_OrderReady_20260718\\USB_Replug_Dongle_RevC1_JLCPCB_OrderReady_20260718_gerber_drill.zip",
+      "sha256": "6CAC9D513B0341766E7C2989DBD89D8055B379E69DD07F3453C60F4855EF2A31",
+      "entry_count": 16,
+      "duplicate_entries": [],
+      "empty_entries": [],
+      "read_errors": [],
+      "passed": true
+    },
+    {
+      "path": "D:\\oh_my_usb\\production\\USB_Replug_Dongle_RevC1_JLCPCB_OrderReady_20260718\\assembly.zip",
+      "sha256": "FDB6252F8063E1923F6F2B85874C8F09CB350C59847E999AF33D1EB8ECEFE83E",
+      "entry_count": 4,
+      "duplicate_entries": [],
+      "empty_entries": [],
+      "read_errors": [],
+      "passed": true
+    },
+    {
+      "path": "D:\\oh_my_usb\\production\\USB_Replug_Dongle_RevC1_JLCPCB_OrderReady_20260718_FULL_RELEASE.zip",
+      "sha256": "EB85C8252D5551C67B9F9A2CA2FB962723F9D101DD1DD118982638C981A836F7",
+      "entry_count": 50,
+      "duplicate_entries": [],
+      "empty_entries": [],
+      "read_errors": [],
+      "passed": true
+    }
+  ],
+  "checks_passed": true
+}
