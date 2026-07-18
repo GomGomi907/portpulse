@@ -1,27 +1,22 @@
 # PortPulse
 
-PortPulse는 자동화된 하드웨어 테스트를 위한 USB 2.0 재연결 동글입니다.
-PC와 DUT(Device Under Test) 사이에 연결하며, 제어 MCU는 계속 연결된 상태로
-유지하면서 DUT의 VBUS와 USB D+/D−를 소프트웨어 명령으로 차단하고 복구합니다.
+한국어가 기본 문서입니다. 영어 보조 문서는 [README.en.md](README.en.md)를
+참조하세요.
 
-실제 USB 장치를 뽑았다가 다시 연결하는 동작을 자동화 테스트에서 재현하는 것이
-주요 목적입니다.
+## 무엇인가
 
-## Rev.C.1 하드웨어
+PortPulse는 PC와 USB 장치(DUT) 사이에 연결하는 USB 2.0 재연결 동글입니다.
 
-- 4층 PCB, 49.5 mm × 21.6 mm
-- USB-C upstream 입력
-- USB-A downstream DUT 출력
-- USB 2.0 Hub + CH552 제어 MCU
-- DUT VBUS 독립 ON/OFF
-- DUT D+/D− 독립 연결/차단
-- TPS2552 전류 제한 및 Fault 감지
-- JLCPCB Economic, Top-side 완전실장 릴리스
+PC와 제어 MCU의 연결은 유지한 채, 외부 DUT의 VBUS와 D+/D−를 소프트웨어로
+차단하고 복구합니다. 따라서 USB 장치를 실제로 뽑았다가 다시 연결하는 동작을
+자동화 테스트에서 재현할 수 있습니다.
 
-## 명령 인터페이스
+## 사용 방법
 
-Rev.C.1 펌웨어는 USB CDC 가상 COM 포트를 제공합니다. 현재 네이티브 C 호스트
-프로그램은 Windows와 Linux에서 사용할 수 있습니다.
+1. PortPulse의 USB-C upstream 포트를 PC에 연결합니다.
+2. DUT를 PortPulse의 USB-A downstream 포트에 연결합니다.
+3. 장치 관리자에서 PortPulse의 COM 포트 번호를 확인합니다.
+4. 네이티브 `portpulse` 프로그램으로 명령을 보냅니다.
 
 ```text
 portpulse --port COM12 status
@@ -30,42 +25,17 @@ portpulse --port COM12 off
 portpulse --port COM12 --delay-ms 2000 cycle
 ```
 
-지원 명령:
+주요 명령:
 
-- `on`: DUT VBUS와 D+/D− 연결
-- `off`: DUT VBUS와 D+/D− 차단
-- `cycle`: DUT 차단 후 지정 시간 뒤 재연결
-- `status`: 현재 연결 상태 확인
+- `on`: DUT 연결
+- `off`: DUT 차단
+- `cycle`: DUT를 차단한 뒤 지정한 시간 후 다시 연결
+- `status`: 현재 상태 확인
 - `fault`: 전원 스위치 Fault 상태 확인
 - `version`: 펌웨어 버전 확인
 
-현재 Rev.C.1은 단일 DUT 포트이며, 다중 장치 자동 검색과 Serial Number 기반
-장치 선택은 다음 호스트 버전에서 추가할 예정입니다.
+현재 Rev.C.1은 DUT 1포트를 지원합니다. 여러 PortPulse를 연결하는 경우에는
+각 장치의 COM 포트를 지정해서 사용합니다.
 
-## 저장소 구성
-
-- `hardware/RevC1/kicad`: 수정 가능한 KiCad 회로도와 PCB 원본
-- `hardware/RevC1/jlcpcb-release`: JLCPCB Gerber, BOM, CPL, 제조용 ZIP
-- `hardware/RevC1/reports`: ERC/DRC, 라우팅, reset-domain, 제조 패키지 검증 보고서
-- `firmware/CH552/release`: 펌웨어 소스, 바이너리, 테스트와 bring-up 문서
-- `host/portpulse`: Windows/Linux용 네이티브 C 호스트 프로그램
-- `docs`: 설계·라우팅·제조 관련 문서
-
-## 검증 상태
-
-생산 릴리스는 다음 검증을 통과했습니다.
-
-- KiCad ERC/DRC
-- BOM/CPL reference set 일치 검사
-- USB differential routing 품질 검사
-- reset-domain 분석
-- Gerber/ZIP/manifest 무결성 검사
-- 펌웨어 재현 빌드와 호스트 테스트
-
-실제 제작 후에는 전원, USB enumeration, DUT 재연결 및 100회 반복 테스트가
-추가로 필요합니다.
-
-## 라이선스
-
-별도 제3자 고지 파일이 명시하는 경우를 제외하고 하드웨어, 펌웨어, 호스트
-프로그램과 문서는 MIT License로 배포합니다.
+하드웨어·펌웨어·호스트 프로그램은 MIT License로 배포합니다. 제3자 구성요소는
+각 구성요소의 고지 파일을 따릅니다.
