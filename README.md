@@ -1,8 +1,5 @@
 # PortPulse
 
-한국어가 기본 문서입니다. 영어 보조 문서는 [README.en.md](README.en.md)를
-참조하세요.
-
 ## 무엇인가
 
 PortPulse는 PC와 USB 장치(DUT) 사이에 연결하는 USB 2.0 재연결 동글입니다.
